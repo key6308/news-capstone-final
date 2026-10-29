@@ -1,4 +1,8 @@
-"""REST API endpoints for articles, subscriptions, and approval logging."""
+"""REST API endpoints for news content and subscriptions.
+
+Endpoints apply authentication and role-based permissions before returning or
+changing application data.
+"""
 
 from django.db.models import Q
 from rest_framework import generics, status
