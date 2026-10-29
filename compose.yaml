@@ -1,0 +1,37 @@
+services:
+  db:
+    image: mariadb:11
+    restart: unless-stopped
+    environment:
+      MARIADB_DATABASE: news_capstone
+      MARIADB_USER: news_user
+      MARIADB_PASSWORD: ${DB_PASSWORD:-local_dev_password_change_me}
+      MARIADB_ROOT_PASSWORD: ${DB_ROOT_PASSWORD:-local_root_password_change_me}
+    volumes:
+      - mariadb_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  web:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DJANGO_SECRET_KEY: ${DJANGO_SECRET_KEY:-local-only-change-this-secret}
+      DJANGO_DEBUG: ${DJANGO_DEBUG:-True}
+      DB_NAME: news_capstone
+      DB_USER: news_user
+      DB_PASSWORD: ${DB_PASSWORD:-local_dev_password_change_me}
+      DB_HOST: db
+      DB_PORT: 3306
+      ALLOWED_HOSTS: 127.0.0.1,localhost
+    ports:
+      - "8000:8000"
+
+volumes:
+  mariadb_data:
