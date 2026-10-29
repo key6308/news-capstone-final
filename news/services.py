@@ -1,4 +1,8 @@
-"""Business services for subscriber notifications and article approval."""
+"""Business services for article approval and notifications.
+
+The service layer keeps approval, subscriber email, and external API logging
+logic out of the request-handling views.
+"""
 
 import logging
 import os

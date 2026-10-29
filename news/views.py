@@ -1,4 +1,8 @@
-"""Web views and role-based workflows for the news application."""
+"""HTML views and role-based workflows for the news application.
+
+Views handle registration, article submission and review, newsletter
+management, and reader subscriptions.
+"""
 
 from functools import wraps
 

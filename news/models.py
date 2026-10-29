@@ -1,4 +1,8 @@
-"""Database models for users, publishers, articles, newsletters, and approvals."""
+"""Database models for the Django News Application.
+
+The models define role-based users, publishers, articles, newsletters, and the
+log entry created when an article is approved.
+"""
 
 from django.contrib.auth.models import AbstractUser
 from django.core.exceptions import ValidationError

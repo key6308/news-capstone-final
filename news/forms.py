@@ -1,4 +1,8 @@
-"""Forms used to validate account, article, newsletter, and subscription input."""
+"""Validated HTML forms for the news application.
+
+The forms restrict choices according to the signed-in user role and provide
+cleaned data to the corresponding views.
+"""
 
 from django import forms
 from django.contrib.auth.forms import UserCreationForm

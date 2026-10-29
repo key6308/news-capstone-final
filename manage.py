@@ -1,4 +1,8 @@
-"""Command-line entry point for Django management commands."""
+"""Command-line entry point for Django management commands.
+
+Use this script for database migrations, system checks, tests, and the local
+development server. Run commands from the repository root.
+"""
 
 #!/usr/bin/env python
 import os

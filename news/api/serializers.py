@@ -1,4 +1,8 @@
-"""Serializers that convert news application models to API representations."""
+"""Serializers for converting application models to API representations.
+
+Serializers define exposed fields and validate relationships submitted to the
+REST API.
+"""
 
 from rest_framework import serializers
 
