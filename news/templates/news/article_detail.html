@@ -1,0 +1,10 @@
+{% extends 'news/base.html' %}
+{% block title %}{{ article.title }}{% endblock %}
+{% block content %}
+<article class="article">
+    <p class="eyebrow">Published {{ article.created_at|date:'M j, Y' }}</p>
+    <h1>{{ article.title }}</h1>
+    <p class="meta">By {% if article.author %}{{ article.author.username }}{% else %}{{ article.publisher.name }}{% endif %}</p>
+    <div class="article-body">{{ article.content|linebreaks }}</div>
+</article>
+{% endblock %}

@@ -1,0 +1,20 @@
+{
+  "info": {
+    "name": "News Capstone API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {"key": "base_url", "value": "http://127.0.0.1:8000"},
+    {"key": "token", "value": "PASTE_TOKEN_HERE"},
+    {"key": "article_id", "value": "1"}
+  ],
+  "item": [
+    {"name": "Get Token", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"username\": \"demo_reader\",\n  \"password\": \"DemoPass123!\"\n}"}, "url": "{{base_url}}/api/token/"}},
+    {"name": "List Approved Articles", "request": {"method": "GET", "header": [{"key": "Authorization", "value": "Token {{token}}"}], "url": "{{base_url}}/api/articles/"}},
+    {"name": "List Subscribed Articles", "request": {"method": "GET", "header": [{"key": "Authorization", "value": "Token {{token}}"}], "url": "{{base_url}}/api/articles/subscribed/"}},
+    {"name": "Get Article", "request": {"method": "GET", "header": [{"key": "Authorization", "value": "Token {{token}}"}], "url": "{{base_url}}/api/articles/{{article_id}}/"}},
+    {"name": "Create Article (Journalist Token)", "request": {"method": "POST", "header": [{"key": "Authorization", "value": "Token {{token}}"}, {"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"title\": \"API Story\",\n  \"content\": \"Story submitted through the API.\"\n}"}, "url": "{{base_url}}/api/articles/"}},
+    {"name": "Update Article", "request": {"method": "PUT", "header": [{"key": "Authorization", "value": "Token {{token}}"}, {"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"title\": \"Updated API Story\",\n  \"content\": \"Updated content.\",\n  \"publisher\": null\n}"}, "url": "{{base_url}}/api/articles/{{article_id}}/"}},
+    {"name": "Delete Article", "request": {"method": "DELETE", "header": [{"key": "Authorization", "value": "Token {{token}}"}], "url": "{{base_url}}/api/articles/{{article_id}}/"}}
+  ]
+}

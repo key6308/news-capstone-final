@@ -1,0 +1,21 @@
+{% extends 'news/base.html' %}
+{% block title %}NewsDesk{% endblock %}
+{% block content %}
+<section class="hero">
+    <p class="eyebrow">Independent journalism + curated publications</p>
+    <h1>Latest approved news</h1>
+    <p>Read approved stories from journalists and publishers.</p>
+</section>
+<section>
+    {% for article in articles %}
+    <article class="card">
+        <h2><a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a></h2>
+        <p class="meta">{{ article.created_at|date:'M j, Y' }} · {% if article.author %}{{ article.author.username }}{% else %}{{ article.publisher.name }}{% endif %}</p>
+        <p>{{ article.content|truncatewords:35 }}</p>
+        {% if user.is_authenticated and user.is_editor or user.is_journalist %}
+            <a href="{% url 'article_edit' article.pk %}">Edit</a>
+        {% endif %}
+    </article>
+    {% empty %}<p>No approved articles yet.</p>{% endfor %}
+</section>
+{% endblock %}

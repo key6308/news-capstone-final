@@ -1,0 +1,3 @@
+{% extends 'news/base.html' %}
+{% block title %}Subscriptions{% endblock %}
+{% block content %}<div class="form-card"><h1>My subscriptions</h1><p>Choose publishers and journalists whose approved articles you want to receive.</p><form method="post">{% csrf_token %}{{ form.as_p }}<button class="primary">Save subscriptions</button></form></div>{% endblock %}

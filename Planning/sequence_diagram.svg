@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="720" viewBox="0 0 1100 720">
+<rect width="1100" height="720" fill="white"/>
+<text x="550" y="45" text-anchor="middle" font-family="Arial" font-size="26" font-weight="bold">News Article Approval Sequence</text>
+<g font-family="Arial" font-size="16" text-anchor="middle">
+<text x="120" y="95">Journalist</text><text x="365" y="95">Django</text><text x="610" y="95">MariaDB</text><text x="855" y="95">Email</text><text x="1000" y="95">Internal API</text>
+</g>
+<g stroke="#333" stroke-width="2" stroke-dasharray="8 8">
+<line x1="120" y1="110" x2="120" y2="650"/><line x1="365" y1="110" x2="365" y2="650"/><line x1="610" y1="110" x2="610" y2="650"/><line x1="855" y1="110" x2="855" y2="650"/><line x1="1000" y1="110" x2="1000" y2="650"/>
+</g>
+<g font-family="Arial" font-size="15" fill="#222">
+<text x="230" y="150">Submit article</text><line x1="125" y1="165" x2="360" y2="165" stroke="#222" marker-end="url(#arrow)"/>
+<text x="475" y="205">Save approved = false</text><line x1="370" y1="220" x2="605" y2="220" stroke="#222" marker-end="url(#arrow)"/>
+<text x="475" y="270">Editor approves</text><line x1="365" y1="285" x2="610" y2="285" stroke="#222" marker-end="url(#arrow)"/>
+<text x="475" y="335">Set approved = true</text><line x1="605" y1="350" x2="370" y2="350" stroke="#222" marker-end="url(#arrow)"/>
+<text x="735" y="405">Email subscribers</text><line x1="370" y1="420" x2="850" y2="420" stroke="#222" marker-end="url(#arrow)"/>
+<text x="680" y="475">POST article_id with Token</text><line x1="370" y1="490" x2="995" y2="490" stroke="#222" marker-end="url(#arrow)"/>
+<text x="820" y="545">Create approval log</text><line x1="995" y1="560" x2="615" y2="560" stroke="#222" marker-end="url(#arrow)"/>
+<text x="430" y="615">Return success</text><line x1="365" y1="630" x2="120" y2="630" stroke="#222" marker-end="url(#arrow)"/>
+</g>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto"><path d="M0,0 L10,3 L0,6 z" fill="#222"/></marker></defs>
+</svg>
