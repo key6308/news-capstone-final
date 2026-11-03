@@ -1,0 +1,10 @@
+[flake8]
+# PEP 8 default line length.
+max-line-length = 79
+exclude =
+    .git,
+    __pycache__,
+    .venv,
+    venv,
+    news/migrations,
+    docs/_build

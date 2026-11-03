@@ -1,0 +1,422 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>news.models &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c38761f1" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="news.services" href="news.services.html" />
+    <link rel="prev" title="API reference" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#data-and-business-logic">Data and business logic</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">news.models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.services.html">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rest-api">REST API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api.permissions.html">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building_docs.html">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API reference</a></li>
+      <li class="breadcrumb-item active">news.models</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-news.models">
+<span id="news-models"></span><h1>news.models<a class="headerlink" href="#module-news.models" title="Link to this heading"></a></h1>
+<p>Database models for the Django News Application.</p>
+<p>The models define role-based users, publishers, articles, newsletters, and the
+log entry created when an article is approved.</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.models.ApprovedArticleLog" title="news.models.ApprovedArticleLog"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ApprovedArticleLog</span></code></a></p></td>
+<td><p>A record created through the API each time an article is approved.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.models.Article" title="news.models.Article"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Article</span></code></a></p></td>
+<td><p>A news article owned by either a journalist or a publisher.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.models.Newsletter" title="news.models.Newsletter"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Newsletter</span></code></a></p></td>
+<td><p>A curated collection of approved articles.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.models.Publisher" title="news.models.Publisher"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Publisher</span></code></a></p></td>
+<td><p>A news organisation that owns articles and can be followed by readers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.models.User" title="news.models.User"><code class="xref py py-obj docutils literal notranslate"><span class="pre">User</span></code></a></p></td>
+<td><p>Application user with a reader, editor, or journalist role.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.Publisher">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.models.</span></span><span class="sig-name descname"><span class="pre">Publisher</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#Publisher"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.Publisher" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A news organisation that owns articles and can be followed by readers.</p>
+<p>Editors review articles submitted on behalf of the publisher, and
+journalists may submit articles under the publisher’s name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<em>str</em>) – Unique display name of the publisher.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Optional free-text description.</p></li>
+<li><p><strong>editors</strong> (<em>ManyToManyField</em>) – Editor users who review this publisher’s
+articles.</p></li>
+<li><p><strong>journalists</strong> (<em>ManyToManyField</em>) – Journalist users affiliated with this
+publisher.</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – When the publisher was created.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.User">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.models.</span></span><span class="sig-name descname"><span class="pre">User</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#User"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.User" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractUser</span></code></p>
+<p>Application user with a reader, editor, or journalist role.</p>
+<p>Extends Django’s <code class="xref py py-class docutils literal notranslate"><span class="pre">AbstractUser</span></code>. The
+role decides which pages and API endpoints the user may access. Readers
+can subscribe to publishers and individual journalists.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>role</strong> (<em>str</em>) – One of the values in <a class="reference internal" href="#news.models.User.Roles" title="news.models.User.Roles"><code class="xref py py-class docutils literal notranslate"><span class="pre">User.Roles</span></code></a>.</p></li>
+<li><p><strong>subscribed_publishers</strong> (<em>ManyToManyField</em>) – Publishers a reader follows.</p></li>
+<li><p><strong>subscribed_journalists</strong> (<em>ManyToManyField</em>) – Journalists a reader follows.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.User.Roles">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">Roles</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#User.Roles"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.User.Roles" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">TextChoices</span></code></p>
+<p>The account roles supported by the application.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.models.User.from_db">
+<em class="property"><span class="k"><span class="pre">classmethod</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">from_db</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">db</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">field_names</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">values</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#User.from_db"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.User.from_db" title="Link to this definition"></a></dt>
+<dd><p>Load a user and remember the role it was stored with.</p>
+<p><a class="reference internal" href="news.signals.html#module-news.signals" title="news.signals"><code class="xref py py-mod docutils literal notranslate"><span class="pre">news.signals</span></code></a> compares the remembered role with the current one
+so the permission group is only rebuilt when the role changes.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.models.User.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#User.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.User.clean" title="Link to this definition"></a></dt>
+<dd><p>Validate that journalists do not hold reader subscriptions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>django.core.exceptions.ValidationError</strong> – If a saved journalist
+    account has publisher or journalist subscriptions.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="news.models.User.is_reader">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_reader</span></span><a class="headerlink" href="#news.models.User.is_reader" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the user has the reader role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="news.models.User.is_editor">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_editor</span></span><a class="headerlink" href="#news.models.User.is_editor" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the user has the editor role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="news.models.User.is_journalist">
+<em class="property"><span class="k"><span class="pre">property</span></span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">is_journalist</span></span><a class="headerlink" href="#news.models.User.is_journalist" title="Link to this definition"></a></dt>
+<dd><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the user has the journalist role.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="news.models.User.can_modify">
+<span class="sig-name descname"><span class="pre">can_modify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">obj</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#User.can_modify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.User.can_modify" title="Link to this definition"></a></dt>
+<dd><p>Return whether the user may edit or delete an article/newsletter.</p>
+<p>Editors may change any article or newsletter. Journalists may change
+only the ones they authored. Other roles may change nothing.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>obj</strong> (<a class="reference internal" href="#news.models.Article" title="news.models.Article"><em>Article</em></a><em> | </em><a class="reference internal" href="#news.models.Newsletter" title="news.models.Newsletter"><em>Newsletter</em></a>) – The object to change.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">True</span></code> if the change is allowed.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.Article">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.models.</span></span><span class="sig-name descname"><span class="pre">Article</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#Article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.Article" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A news article owned by either a journalist or a publisher.</p>
+<p>Exactly one of <code class="xref py py-attr docutils literal notranslate"><span class="pre">author</span></code> and <code class="xref py py-attr docutils literal notranslate"><span class="pre">publisher</span></code> must be set; a
+database check constraint enforces this. New and edited articles start
+unapproved until an editor approves them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Headline of the article.</p></li>
+<li><p><strong>content</strong> (<em>str</em>) – Body text of the article.</p></li>
+<li><p><strong>author</strong> (<a class="reference internal" href="#news.models.User" title="news.models.User"><em>User</em></a>) – Journalist who owns an independent article, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>publisher</strong> (<a class="reference internal" href="#news.models.Publisher" title="news.models.Publisher"><em>Publisher</em></a>) – Publisher that owns the article, or <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – When the article was created.</p></li>
+<li><p><strong>approved</strong> (<em>bool</em>) – Whether an editor has approved the article.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.models.Article.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#Article.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.Article.clean" title="Link to this definition"></a></dt>
+<dd><p>Validate article ownership.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>django.core.exceptions.ValidationError</strong> – If the article has both or
+    neither of an author and a publisher, or if the author is not
+    a journalist.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.Newsletter">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.models.</span></span><span class="sig-name descname"><span class="pre">Newsletter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#Newsletter"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.Newsletter" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A curated collection of approved articles.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>title</strong> (<em>str</em>) – Newsletter title.</p></li>
+<li><p><strong>description</strong> (<em>str</em>) – Optional summary shown with the newsletter.</p></li>
+<li><p><strong>created_at</strong> (<em>datetime</em>) – When the newsletter was created.</p></li>
+<li><p><strong>author</strong> (<a class="reference internal" href="#news.models.User" title="news.models.User"><em>User</em></a>) – Journalist or editor who created the newsletter.</p></li>
+<li><p><strong>articles</strong> (<em>ManyToManyField</em>) – Articles included in the newsletter.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.models.Newsletter.clean">
+<span class="sig-name descname"><span class="pre">clean</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#Newsletter.clean"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.Newsletter.clean" title="Link to this definition"></a></dt>
+<dd><p>Validate that the author is a journalist or an editor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Raises<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>django.core.exceptions.ValidationError</strong> – If a reader is set as the
+    newsletter author.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.models.ApprovedArticleLog">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.models.</span></span><span class="sig-name descname"><span class="pre">ApprovedArticleLog</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/models.html#ApprovedArticleLog"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.models.ApprovedArticleLog" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Model</span></code></p>
+<p>A record created through the API each time an article is approved.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Variables<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>article</strong> (<a class="reference internal" href="#news.models.Article" title="news.models.Article"><em>Article</em></a>) – The approved article (one log entry per article).</p></li>
+<li><p><strong>article_title</strong> (<em>str</em>) – Title of the article when it was approved.</p></li>
+<li><p><strong>approved_at</strong> (<em>datetime</em>) – When the log entry was created.</p></li>
+<li><p><strong>source</strong> (<em>str</em>) – Short description of what triggered the log entry.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="API reference" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="news.services.html" class="btn btn-neutral float-right" title="news.services" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

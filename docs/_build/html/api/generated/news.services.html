@@ -1,0 +1,303 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>news.services &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c38761f1" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="news.signals" href="news.signals.html" />
+    <link rel="prev" title="news.models" href="news.models.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API reference</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#data-and-business-logic">Data and business logic</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="news.models.html">news.models</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#rest-api">REST API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api.permissions.html">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building_docs.html">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API reference</a></li>
+      <li class="breadcrumb-item active">news.services</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-news.services">
+<span id="news-services"></span><h1>news.services<a class="headerlink" href="#module-news.services" title="Link to this heading"></a></h1>
+<p>Business services for article approval and notifications.</p>
+<p>The service layer keeps approval, subscriber email, and external API logging
+logic out of the request-handling views.</p>
+<p class="rubric">Functions</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.services.approve_article_and_notify" title="news.services.approve_article_and_notify"><code class="xref py py-obj docutils literal notranslate"><span class="pre">approve_article_and_notify</span></code></a></p></td>
+<td><p>Approve an article, email subscribers, and log it through the API.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.services.email_approved_article" title="news.services.email_approved_article"><code class="xref py py-obj docutils literal notranslate"><span class="pre">email_approved_article</span></code></a></p></td>
+<td><p>Email an approved article to its subscribers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.services.get_article_subscriber_emails" title="news.services.get_article_subscriber_emails"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_article_subscriber_emails</span></code></a></p></td>
+<td><p>Return the email addresses of readers subscribed to the article's owner.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.services.post_approved_article" title="news.services.post_approved_article"><code class="xref py py-obj docutils literal notranslate"><span class="pre">post_approved_article</span></code></a></p></td>
+<td><p>Send the approved article's ID to the approval-log API endpoint.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py function">
+<dt class="sig sig-object py" id="news.services.get_article_subscriber_emails">
+<span class="sig-prename descclassname"><span class="pre">news.services.</span></span><span class="sig-name descname"><span class="pre">get_article_subscriber_emails</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/services.html#get_article_subscriber_emails"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.services.get_article_subscriber_emails" title="Link to this definition"></a></dt>
+<dd><p>Return the email addresses of readers subscribed to the article’s owner.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>article</strong> (<a class="reference internal" href="news.models.html#news.models.Article" title="news.models.Article"><em>news.models.Article</em></a>) – The article being published.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sorted, de-duplicated email addresses of active readers
+who follow the article’s publisher or journalist.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>list[str]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="news.services.email_approved_article">
+<span class="sig-prename descclassname"><span class="pre">news.services.</span></span><span class="sig-name descname"><span class="pre">email_approved_article</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/services.html#email_approved_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.services.email_approved_article" title="Link to this definition"></a></dt>
+<dd><p>Email an approved article to its subscribers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>article</strong> (<a class="reference internal" href="news.models.html#news.models.Article" title="news.models.Article"><em>news.models.Article</em></a>) – The approved article.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The number of recipients. <code class="docutils literal notranslate"><span class="pre">0</span></code> means no email was sent.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="news.services.post_approved_article">
+<span class="sig-prename descclassname"><span class="pre">news.services.</span></span><span class="sig-name descname"><span class="pre">post_approved_article</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">token</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/services.html#post_approved_article"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.services.post_approved_article" title="Link to this definition"></a></dt>
+<dd><p>Send the approved article’s ID to the approval-log API endpoint.</p>
+<p>The endpoint URL comes from the <code class="docutils literal notranslate"><span class="pre">APPROVED_API_URL</span></code> environment variable
+or, if unset, the <code class="docutils literal notranslate"><span class="pre">APPROVED_API_URL</span></code> Django setting.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>article</strong> (<a class="reference internal" href="news.models.html#news.models.Article" title="news.models.Article"><em>news.models.Article</em></a>) – The approved article.</p></li>
+<li><p><strong>token</strong> (<em>str</em>) – API token of the approving editor.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The successful HTTP response.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>requests.Response</p>
+</dd>
+<dt class="field-even">Raises<span class="colon">:</span></dt>
+<dd class="field-even"><p><strong>requests.RequestException</strong> – If the request fails or returns an error
+    status code.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="news.services.approve_article_and_notify">
+<span class="sig-prename descclassname"><span class="pre">news.services.</span></span><span class="sig-name descname"><span class="pre">approve_article_and_notify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">article</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">editor</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/services.html#approve_article_and_notify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.services.approve_article_and_notify" title="Link to this definition"></a></dt>
+<dd><p>Approve an article, email subscribers, and log it through the API.</p>
+<p>The approval is saved inside a transaction that locks the article row.
+A failure of the API logging call is logged as a warning and does not
+undo the approval.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>article</strong> (<a class="reference internal" href="news.models.html#news.models.Article" title="news.models.Article"><em>news.models.Article</em></a>) – The article to approve.</p></li>
+<li><p><strong>editor</strong> (<a class="reference internal" href="news.models.html#news.models.User" title="news.models.User"><em>news.models.User</em></a>) – The editor approving the article.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p><code class="docutils literal notranslate"><span class="pre">(article,</span> <span class="pre">email_count,</span> <span class="pre">api_logged)</span></code> – the refreshed
+article, the number of subscribers emailed, and whether the API
+logging call succeeded.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>tuple</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="news.models.html" class="btn btn-neutral float-left" title="news.models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="news.signals.html" class="btn btn-neutral float-right" title="news.signals" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

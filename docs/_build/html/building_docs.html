@@ -1,0 +1,258 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Building this documentation &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c38761f1" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Git workflow" href="git_workflow.html" />
+    <link rel="prev" title="news_application.settings" href="api/generated/news_application.settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#data-and-business-logic">Data and business logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.models.html">news.models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.services.html">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#rest-api">REST API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.permissions.html">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Building this documentation</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="building-this-documentation">
+<h1>Building this documentation<a class="headerlink" href="#building-this-documentation" title="Link to this heading"></a></h1>
+<p>The rendered HTML is already in the repository at <code class="docutils literal notranslate"><span class="pre">docs/_build/html/</span></code>. To
+read it, open <code class="docutils literal notranslate"><span class="pre">docs/_build/html/index.html</span></code> in a browser. You only need to
+rebuild it after changing the documentation or the docstrings.</p>
+<section id="rebuild-on-windows-powershell">
+<h2>Rebuild on Windows (PowerShell)<a class="headerlink" href="#rebuild-on-windows-powershell" title="Link to this heading"></a></h2>
+<p>From the project root:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">.\</span><span class="n">build_docs</span><span class="p">.</span><span class="n">ps1</span>
+</pre></div>
+</div>
+<p>The script:</p>
+<ol class="arabic simple">
+<li><p>Finds Python 3.12 (<code class="docutils literal notranslate"><span class="pre">py</span> <span class="pre">-3.12</span></code>, then <code class="docutils literal notranslate"><span class="pre">python</span></code>, then <code class="docutils literal notranslate"><span class="pre">python3</span></code>).</p></li>
+<li><p>Creates the <code class="docutils literal notranslate"><span class="pre">.venv</span></code> virtual environment if it does not exist.</p></li>
+<li><p>Installs <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> into <code class="docutils literal notranslate"><span class="pre">.venv</span></code> if any required package is
+missing.</p></li>
+<li><p>Runs Sphinx and writes the site to <code class="docutils literal notranslate"><span class="pre">docs/_build/html/</span></code>.</p></li>
+</ol>
+<p>It works from any folder, and <code class="docutils literal notranslate"><span class="pre">docs\build_docs.ps1</span></code> can be run directly. A
+database server is <em>not</em> required. Use <code class="docutils literal notranslate"><span class="pre">-Clean</span></code> to delete the previous
+output first:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="p">.\</span><span class="n">build_docs</span><span class="p">.</span><span class="n">ps1</span> <span class="n">-Clean</span>
+</pre></div>
+</div>
+<p>If PowerShell blocks the script, run:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">powershell</span> <span class="n">-ExecutionPolicy</span> <span class="n">Bypass</span> <span class="o">-File</span> <span class="p">.\</span><span class="n">build_docs</span><span class="p">.</span><span class="n">ps1</span>
+</pre></div>
+</div>
+</section>
+<section id="rebuild-on-macos-linux">
+<h2>Rebuild on macOS / Linux<a class="headerlink" href="#rebuild-on-macos-linux" title="Link to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sh<span class="w"> </span>docs/build_docs.sh
+</pre></div>
+</div>
+</section>
+<section id="rebuild-manually">
+<h2>Rebuild manually<a class="headerlink" href="#rebuild-manually" title="Link to this heading"></a></h2>
+<p>With the virtual environment active and the requirements installed:</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">-m</span> <span class="n">sphinx</span> <span class="n">-W</span> <span class="p">-</span><span class="n">-keep-going</span> <span class="n">-b</span> <span class="n">html</span> <span class="n">-d</span> <span class="n">docs</span><span class="p">/</span><span class="n">_build</span><span class="p">/</span><span class="n">doctrees</span> <span class="n">docs</span> <span class="n">docs</span><span class="p">/</span><span class="n">_build</span><span class="p">/</span><span class="n">html</span>
+</pre></div>
+</div>
+<p>Or, from inside <code class="docutils literal notranslate"><span class="pre">docs/</span></code>, <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">html</span></code> (macOS/Linux) or <code class="docutils literal notranslate"><span class="pre">.\make.bat</span> <span class="pre">html</span></code>
+(Windows).</p>
+<p><code class="docutils literal notranslate"><span class="pre">-W</span></code> turns warnings into errors so problems are not missed.</p>
+</section>
+<section id="source-layout">
+<h2>Source layout<a class="headerlink" href="#source-layout" title="Link to this heading"></a></h2>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>docs/
+    conf.py                   Sphinx configuration
+    index.rst                 Home page and table of contents
+    *.rst                     User guide pages
+    api/index.rst             API reference (autosummary)
+    api/generated/            Pages generated by autosummary
+    _static/custom.css        Small style tweaks
+    _templates/autosummary/   Template for generated module pages
+    Makefile, make.bat        Standard Sphinx build helpers
+    build_docs.ps1/.sh        One-step build scripts
+    _build/html/              Rendered HTML (committed)
+</pre></div>
+</div>
+<p>The API reference is generated from the docstrings in the source code with
+<code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code> and <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autosummary</span></code>. Docstrings use the
+Google style, which <code class="docutils literal notranslate"><span class="pre">sphinx.ext.napoleon</span></code> converts for Sphinx.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="api/generated/news_application.settings.html" class="btn btn-neutral float-left" title="news_application.settings" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="git_workflow.html" class="btn btn-neutral float-right" title="Git workflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

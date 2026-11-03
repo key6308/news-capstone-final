@@ -23,5 +23,8 @@ media/
 .DS_Store
 Thumbs.db
 
-# Sphinx temporary files; generated HTML may be committed for review
+# Sphinx: ignore the build cache only. The rendered HTML in docs/_build/html
+# is committed on purpose so reviewers can open it without building.
 docs/_build/doctrees/
+!docs/_build/
+!docs/_build/html/

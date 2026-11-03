@@ -1,11 +1,45 @@
-"""Application module for the Django news project."""
+"""Django settings for the news application.
+
+Secrets and database connection details are read from environment variables
+(see ``.env.example``) so no credentials are stored in the repository. If a
+``.env`` file exists in the project root and ``python-dotenv`` is installed,
+its values are loaded first; variables already set in the environment take
+precedence.
+
+Environment variables:
+    * ``DJANGO_SECRET_KEY`` -- secret key (default: a development-only value).
+    * ``DJANGO_DEBUG`` -- ``True`` or ``False`` (default ``True``).
+    * ``ALLOWED_HOSTS`` -- comma-separated host names
+      (default ``127.0.0.1,localhost``).
+    * ``DB_NAME``, ``DB_USER``, ``DB_PASSWORD``, ``DB_HOST``, ``DB_PORT`` --
+      MySQL/MariaDB connection details.
+    * ``APPROVED_API_URL`` -- endpoint called after an article is approved.
+
+Other notable settings:
+    * ``AUTH_USER_MODEL`` is :class:`news.models.User`.
+    * The REST API uses token authentication and requires sign-in by default.
+    * Emails are printed to the console (``EMAIL_BACKEND`` is the console
+      backend), which is suitable for local development.
+"""
 import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+try:
+    from dotenv import load_dotenv
+except ImportError:  # python-dotenv is optional; use the real environment.
+    pass
+else:
+    load_dotenv(BASE_DIR / '.env')
+
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'dev-only-change-me')
 DEBUG = os.getenv('DJANGO_DEBUG', 'True').lower() == 'true'
-ALLOWED_HOSTS = [host.strip() for host in os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',') if host.strip()]
+ALLOWED_HOSTS = [
+    host.strip()
+    for host in os.getenv('ALLOWED_HOSTS', '127.0.0.1,localhost').split(',')
+    if host.strip()
+]
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -57,11 +91,12 @@ DATABASES = {
     }
 }
 
+_VALIDATORS = 'django.contrib.auth.password_validation'
 AUTH_PASSWORD_VALIDATORS = [
-    {'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator'},
-    {'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'},
+    {'NAME': f'{_VALIDATORS}.UserAttributeSimilarityValidator'},
+    {'NAME': f'{_VALIDATORS}.MinimumLengthValidator'},
+    {'NAME': f'{_VALIDATORS}.CommonPasswordValidator'},
+    {'NAME': f'{_VALIDATORS}.NumericPasswordValidator'},
 ]
 
 LANGUAGE_CODE = 'en-us'

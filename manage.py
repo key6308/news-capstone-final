@@ -1,17 +1,18 @@
+#!/usr/bin/env python
 """Command-line entry point for Django management commands.
 
 Use this script for database migrations, system checks, tests, and the local
 development server. Run commands from the repository root.
 """
-
-#!/usr/bin/env python
 import os
 import sys
 
 
 def main():
-    """Main for the application."""
-    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'news_application.settings')
+    """Point Django at the project settings and run the given command."""
+    os.environ.setdefault(
+        'DJANGO_SETTINGS_MODULE', 'news_application.settings'
+    )
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:

@@ -1,0 +1,17 @@
+/* Small readability tweaks on top of the Read the Docs theme. */
+
+/* Let wide tables wrap instead of forcing horizontal scrolling. */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal;
+}
+
+/* Use more of the screen on wide monitors. */
+.wy-nav-content {
+    max-width: 960px;
+}
+
+/* Separate the documented members of a class a little more clearly. */
+dl.py.class > dd > dl.py {
+    margin-top: 1.25em;
+}

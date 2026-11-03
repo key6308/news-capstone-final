@@ -1,0 +1,267 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>news.api.permissions &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c38761f1" />
+
+  
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="news.api.views" href="news.api.views.html" />
+    <link rel="prev" title="news.api.serializers" href="news.api.serializers.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">API reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#data-and-business-logic">Data and business logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.models.html">news.models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.services.html">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#rest-api">REST API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../building_docs.html">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../building_docs.html#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">API reference</a></li>
+      <li class="breadcrumb-item active">news.api.permissions</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="module-news.api.permissions">
+<span id="news-api-permissions"></span><h1>news.api.permissions<a class="headerlink" href="#module-news.api.permissions" title="Link to this heading"></a></h1>
+<p>Role-based permission classes for the REST API.</p>
+<p class="rubric">Classes</p>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.api.permissions.IsEditor" title="news.api.permissions.IsEditor"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsEditor</span></code></a></p></td>
+<td><p>Allow access only to signed-in editors.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.api.permissions.IsEditorOrJournalist" title="news.api.permissions.IsEditorOrJournalist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsEditorOrJournalist</span></code></a></p></td>
+<td><p>Allow access only to signed-in editors or journalists.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#news.api.permissions.IsJournalist" title="news.api.permissions.IsJournalist"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsJournalist</span></code></a></p></td>
+<td><p>Allow access only to signed-in journalists.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#news.api.permissions.IsReader" title="news.api.permissions.IsReader"><code class="xref py py-obj docutils literal notranslate"><span class="pre">IsReader</span></code></a></p></td>
+<td><p>Allow access only to signed-in readers.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Details</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="news.api.permissions.IsJournalist">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.api.permissions.</span></span><span class="sig-name descname"><span class="pre">IsJournalist</span></span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsJournalist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsJournalist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<p>Allow access only to signed-in journalists.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.api.permissions.IsJournalist.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsJournalist.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsJournalist.has_permission" title="Link to this definition"></a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the requesting user may use the view.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.api.permissions.IsEditorOrJournalist">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.api.permissions.</span></span><span class="sig-name descname"><span class="pre">IsEditorOrJournalist</span></span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsEditorOrJournalist"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsEditorOrJournalist" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<p>Allow access only to signed-in editors or journalists.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.api.permissions.IsEditorOrJournalist.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsEditorOrJournalist.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsEditorOrJournalist.has_permission" title="Link to this definition"></a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the requesting user may use the view.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.api.permissions.IsReader">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.api.permissions.</span></span><span class="sig-name descname"><span class="pre">IsReader</span></span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsReader"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsReader" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<p>Allow access only to signed-in readers.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.api.permissions.IsReader.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsReader.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsReader.has_permission" title="Link to this definition"></a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the requesting user may use the view.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="news.api.permissions.IsEditor">
+<em class="property"><span class="k"><span class="pre">class</span></span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">news.api.permissions.</span></span><span class="sig-name descname"><span class="pre">IsEditor</span></span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsEditor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsEditor" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">BasePermission</span></code></p>
+<p>Allow access only to signed-in editors.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="news.api.permissions.IsEditor.has_permission">
+<span class="sig-name descname"><span class="pre">has_permission</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">view</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/news/api/permissions.html#IsEditor.has_permission"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#news.api.permissions.IsEditor.has_permission" title="Link to this definition"></a></dt>
+<dd><p>Return <code class="docutils literal notranslate"><span class="pre">True</span></code> if the requesting user may use the view.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="news.api.serializers.html" class="btn btn-neutral float-left" title="news.api.serializers" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="news.api.views.html" class="btn btn-neutral float-right" title="news.api.views" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,4 +1,4 @@
-"""Application module for the Django news project."""
+"""WSGI entry point that exposes the Django application as ``application``."""
 import os
 from django.core.wsgi import get_wsgi_application
 

@@ -13,24 +13,43 @@ from django.core.mail import send_mail
 from django.db import transaction
 from rest_framework.authtoken.models import Token
 
-from .models import ApprovedArticleLog, Article
+from .models import Article
 
 logger = logging.getLogger(__name__)
 
 
 def get_article_subscriber_emails(article):
-    """Return unique email addresses for readers subscribed to the article owner."""
+    """Return the email addresses of readers subscribed to the article's owner.
+
+    Args:
+        article (news.models.Article): The article being published.
+
+    Returns:
+        list[str]: Sorted, de-duplicated email addresses of active readers
+        who follow the article's publisher or journalist.
+    """
     if article.publisher_id:
-        subscribers = article.publisher.subscriber_users.filter(is_active=True, role='reader')
+        subscribers = article.publisher.subscriber_users.filter(
+            is_active=True, role='reader'
+        )
     elif article.author_id:
-        subscribers = article.author.journalist_subscribers.filter(is_active=True, role='reader')
+        subscribers = article.author.journalist_subscribers.filter(
+            is_active=True, role='reader'
+        )
     else:
         subscribers = []
     return sorted({user.email for user in subscribers if user.email})
 
 
 def email_approved_article(article):
-    """Email an approved article to its subscribers and return recipient count."""
+    """Email an approved article to its subscribers.
+
+    Args:
+        article (news.models.Article): The approved article.
+
+    Returns:
+        int: The number of recipients. ``0`` means no email was sent.
+    """
     recipients = get_article_subscriber_emails(article)
     if not recipients:
         return 0
@@ -45,7 +64,22 @@ def email_approved_article(article):
 
 
 def post_approved_article(article, token):
-    """Post the approved article ID to the configured API endpoint."""
+    """Send the approved article's ID to the approval-log API endpoint.
+
+    The endpoint URL comes from the ``APPROVED_API_URL`` environment variable
+    or, if unset, the ``APPROVED_API_URL`` Django setting.
+
+    Args:
+        article (news.models.Article): The approved article.
+        token (str): API token of the approving editor.
+
+    Returns:
+        requests.Response: The successful HTTP response.
+
+    Raises:
+        requests.RequestException: If the request fails or returns an error
+            status code.
+    """
     url = os.getenv('APPROVED_API_URL', settings.APPROVED_API_URL)
     response = requests.post(
         url,
@@ -58,7 +92,21 @@ def post_approved_article(article, token):
 
 
 def approve_article_and_notify(article, editor):
-    """Approve once, then email subscribers and log through the project's API."""
+    """Approve an article, email subscribers, and log it through the API.
+
+    The approval is saved inside a transaction that locks the article row.
+    A failure of the API logging call is logged as a warning and does not
+    undo the approval.
+
+    Args:
+        article (news.models.Article): The article to approve.
+        editor (news.models.User): The editor approving the article.
+
+    Returns:
+        tuple: ``(article, email_count, api_logged)`` -- the refreshed
+        article, the number of subscribers emailed, and whether the API
+        logging call succeeded.
+    """
     with transaction.atomic():
         article = Article.objects.select_for_update().get(pk=article.pk)
         article.approved = True

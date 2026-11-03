@@ -1,32 +1,47 @@
 Django News Application
 =======================
 
-Welcome to the documentation for the Django News Application capstone project.
-This project supports reader, journalist, and editor accounts, article review,
-newsletters, subscriptions, and a token-authenticated REST API.
+The Django News Application is a newsroom website with three kinds of
+accounts. **Journalists** write articles, **editors** review and approve them,
+and **readers** browse approved stories and subscribe to the publishers and
+journalists they like. Approved articles are emailed to subscribers, and a
+token-authenticated REST API exposes the same content to other programs.
+
+.. note::
+
+   This HTML documentation is pre-built and stored in the repository at
+   ``docs/_build/html/``. Open ``docs/_build/html/index.html`` in a web
+   browser to read it. You do not need to install anything to view it.
+
+Where to start
+--------------
+
+* New to the project? Read the :doc:`overview` first.
+* Want to run it? Follow :doc:`installation`, then :doc:`quickstart`.
+* Calling the HTTP API? See :doc:`rest_api`.
+* Looking for a class or function? Browse the :doc:`api/index`.
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: User guide
 
    overview
-   setup
-   user_guide
-   modules
-   api
+   installation
+   quickstart
+   rest_api
    troubleshooting
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Developer reference
+
+   api/index
+   building_docs
    git_workflow
 
-Project overview
-----------------
+Indices
+-------
 
-The application is built with Django and Django REST Framework. It uses a
-MySQL/MariaDB database by default. The project can be run locally with Python
-or with Docker Compose.
-
-* :doc:`overview` explains the main features and user roles.
-* :doc:`setup` explains how to install and run the project.
-* :doc:`user_guide` describes common workflows.
-* :doc:`modules` documents the main Python modules.
-* :doc:`api` describes the REST API entry points.
-* :doc:`troubleshooting` covers common setup issues.
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`

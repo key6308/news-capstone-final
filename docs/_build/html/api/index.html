@@ -1,0 +1,269 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>API reference &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c38761f1" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="news.models" href="generated/news.models.html" />
+    <link rel="prev" title="Troubleshooting" href="../troubleshooting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#data-and-business-logic">Data and business logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.models.html">news.models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.services.html">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rest-api">REST API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.api.permissions.html">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../building_docs.html">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../building_docs.html#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building_docs.html#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building_docs.html#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../building_docs.html#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">API reference</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="api-reference">
+<h1>API reference<a class="headerlink" href="#api-reference" title="Link to this heading"></a></h1>
+<p>This reference is generated from the docstrings in the source code. Each page
+starts with a summary table, followed by the full documentation of every
+class and function. Use the <strong>[source]</strong> links to read the implementation.</p>
+<p>For the HTTP endpoints, see <a class="reference internal" href="../rest_api.html"><span class="doc">REST API endpoints</span></a>.</p>
+<section id="data-and-business-logic">
+<h2>Data and business logic<a class="headerlink" href="#data-and-business-logic" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.models.html#module-news.models" title="news.models"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.models</span></code></a></p></td>
+<td><p>Database models for the Django News Application.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.services.html#module-news.services" title="news.services"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.services</span></code></a></p></td>
+<td><p>Business services for article approval and notifications.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.signals.html#module-news.signals" title="news.signals"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.signals</span></code></a></p></td>
+<td><p>Signal handlers that keep each user's permission group in sync with role.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="web-interface">
+<h2>Web interface<a class="headerlink" href="#web-interface" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.forms.html#module-news.forms" title="news.forms"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.forms</span></code></a></p></td>
+<td><p>Validated HTML forms for the news application.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.views.html#module-news.views" title="news.views"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.views</span></code></a></p></td>
+<td><p>HTML views and role-based workflows for the news application.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.urls.html#module-news.urls" title="news.urls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.urls</span></code></a></p></td>
+<td><p>URL routes for the HTML pages of the <code class="docutils literal notranslate"><span class="pre">news</span></code> app.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.admin.html#module-news.admin" title="news.admin"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.admin</span></code></a></p></td>
+<td><p>Django admin site registrations for the <code class="docutils literal notranslate"><span class="pre">news</span></code> models.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="rest-api">
+<h2>REST API<a class="headerlink" href="#rest-api" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.api.serializers.html#module-news.api.serializers" title="news.api.serializers"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.api.serializers</span></code></a></p></td>
+<td><p>Serializers for converting application models to API representations.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.api.permissions.html#module-news.api.permissions" title="news.api.permissions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.api.permissions</span></code></a></p></td>
+<td><p>Role-based permission classes for the REST API.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.api.views.html#module-news.api.views" title="news.api.views"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.api.views</span></code></a></p></td>
+<td><p>REST API endpoints for news content and subscriptions.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.api_urls.html#module-news.api_urls" title="news.api_urls"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.api_urls</span></code></a></p></td>
+<td><p>URL routes for the token-authenticated REST API (mounted at <code class="docutils literal notranslate"><span class="pre">/api/</span></code>).</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="project-and-app-configuration">
+<h2>Project and app configuration<a class="headerlink" href="#project-and-app-configuration" title="Link to this heading"></a></h2>
+<table class="autosummary longtable docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news.apps.html#module-news.apps" title="news.apps"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.apps</span></code></a></p></td>
+<td><p>Django application configuration for the <code class="docutils literal notranslate"><span class="pre">news</span></code> app.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/news.management.commands.seed_demo.html#module-news.management.commands.seed_demo" title="news.management.commands.seed_demo"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news.management.commands.seed_demo</span></code></a></p></td>
+<td><p>The <code class="docutils literal notranslate"><span class="pre">seed_demo</span></code> management command, which creates local demo data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/news_application.settings.html#module-news_application.settings" title="news_application.settings"><code class="xref py py-obj docutils literal notranslate"><span class="pre">news_application.settings</span></code></a></p></td>
+<td><p>Django settings for the news application.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../troubleshooting.html" class="btn btn-neutral float-left" title="Troubleshooting" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="generated/news.models.html" class="btn btn-neutral float-right" title="news.models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

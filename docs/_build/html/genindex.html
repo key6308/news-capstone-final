@@ -1,0 +1,655 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Index &mdash; Django News Application Documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c38761f1" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=f2a433a1"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="#" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Django News Application
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">User guide</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="overview.html">Project overview</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#what-the-application-does">What the application does</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#user-roles">User roles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#how-article-approval-works">How article approval works</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#technology">Technology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="overview.html#project-layout">Project layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#get-the-project">Get the project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#option-a-run-locally">Option A: run locally</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#create-a-virtual-environment-and-install-dependencies">1. Create a virtual environment and install dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#create-the-database">2. Create the database</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#configure-environment-variables">3. Configure environment variables</a></li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#migrate-test-and-run">4. Migrate, test, and run</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#option-b-run-with-docker">Option B: run with Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">Quickstart and usage</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#load-demo-data">Load demo data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#walkthrough">Walkthrough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#web-pages">Web pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="quickstart.html#run-the-tests">Run the tests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rest_api.html">REST API endpoints</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#authentication">Authentication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#endpoints">Endpoints</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#example-submit-an-article">Example: submit an article</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rest_api.html#postman-collection">Postman collection</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="troubleshooting.html">Troubleshooting</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#database-connection-errors">Database connection errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#missing-python-packages">Missing Python packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#powershell-will-not-run-a-script">PowerShell will not run a script</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#py-is-not-recognized"><code class="docutils literal notranslate"><span class="pre">py</span></code> is not recognized</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#migration-errors">Migration errors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#approval-says-api-logging-failed">Approval says “API logging failed”</a></li>
+<li class="toctree-l2"><a class="reference internal" href="troubleshooting.html#documentation-build-problems">Documentation build problems</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Developer reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#data-and-business-logic">Data and business logic</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.models.html">news.models</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.services.html">news.services</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.signals.html">news.signals</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#web-interface">Web interface</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.forms.html">news.forms</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.views.html">news.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.urls.html">news.urls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.admin.html">news.admin</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#rest-api">REST API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.serializers.html">news.api.serializers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.permissions.html">news.api.permissions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api.views.html">news.api.views</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.api_urls.html">news.api_urls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="api/index.html#project-and-app-configuration">Project and app configuration</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.apps.html">news.apps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news.management.commands.seed_demo.html">news.management.commands.seed_demo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="api/generated/news_application.settings.html">news_application.settings</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="building_docs.html">Building this documentation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="building_docs.html#rebuild-on-windows-powershell">Rebuild on Windows (PowerShell)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building_docs.html#rebuild-on-macos-linux">Rebuild on macOS / Linux</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building_docs.html#rebuild-manually">Rebuild manually</a></li>
+<li class="toctree-l2"><a class="reference internal" href="building_docs.html#source-layout">Source layout</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="git_workflow.html">Git workflow</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Django News Application</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Index</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+
+<h1 id="index">Index</h1>
+
+<div class="genindex-jumpbox">
+ <a href="#A"><strong>A</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#D"><strong>D</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#F"><strong>F</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#H"><strong>H</strong></a>
+ | <a href="#I"><strong>I</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#N"><strong>N</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#R"><strong>R</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
+ | <a href="#U"><strong>U</strong></a>
+ | <a href="#V"><strong>V</strong></a>
+ 
+</div>
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.views.html#news.views.approve_article">approve_article() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.services.html#news.services.approve_article_and_notify">approve_article_and_notify() (in module news.services)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ApprovedArticleAPIView">ApprovedArticleAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.ApprovedArticleLog">ApprovedArticleLog (class in news.models)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.ApprovedArticleLogAdmin">ApprovedArticleLogAdmin (class in news.admin)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.ApprovedArticleLogSerializer">ApprovedArticleLogSerializer (class in news.api.serializers)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.Article">Article (class in news.models)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.article_create">article_create() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.article_delete">article_delete() (in module news.views)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.views.html#news.views.article_detail">article_detail() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.article_edit">article_edit() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.ArticleAdmin.article_owner">article_owner() (news.admin.ArticleAdmin method)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.ArticleAdmin">ArticleAdmin (class in news.admin)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView">ArticleDetailAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.forms.html#news.forms.ArticleForm">ArticleForm (class in news.forms)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleListCreateAPIView">ArticleListCreateAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.ArticleSerializer">ArticleSerializer (class in news.api.serializers)</a>
+</li>
+      <li><a href="api/generated/news.signals.html#news.signals.assign_role_group">assign_role_group() (in module news.signals)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.models.html#news.models.User.can_modify">can_modify() (news.models.User method)</a>
+</li>
+      <li><a href="api/generated/news.forms.html#news.forms.ArticleForm.clean">clean() (news.forms.ArticleForm method)</a>
+
+      <ul>
+        <li><a href="api/generated/news.models.html#news.models.Article.clean">(news.models.Article method)</a>
+</li>
+        <li><a href="api/generated/news.models.html#news.models.Newsletter.clean">(news.models.Newsletter method)</a>
+</li>
+        <li><a href="api/generated/news.models.html#news.models.User.clean">(news.models.User method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.management.commands.seed_demo.html#news.management.commands.seed_demo.Command">Command (class in news.management.commands.seed_demo)</a>
+</li>
+      <li><a href="api/generated/news.signals.html#news.signals.configure_role_group">configure_role_group() (in module news.signals)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.ArticleSerializer.create">create() (news.api.serializers.ArticleSerializer method)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.CustomUserAdmin">CustomUserAdmin (class in news.admin)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="D">D</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.management.commands.seed_demo.html#news.management.commands.seed_demo.DEMO_PASSWORD">DEMO_PASSWORD (in module news.management.commands.seed_demo)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.services.html#news.services.email_approved_article">email_approved_article() (in module news.services)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="F">F</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.models.html#news.models.User.from_db">from_db() (news.models.User class method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.services.html#news.services.get_article_subscriber_emails">get_article_subscriber_emails() (in module news.services)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView.get_object">get_object() (news.api.views.ArticleDetailAPIView method)</a>
+</li>
+      <li><a href="api/generated/news.management.commands.seed_demo.html#news.management.commands.seed_demo.get_or_create_demo_user">get_or_create_demo_user() (in module news.management.commands.seed_demo)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView.get_permissions">get_permissions() (news.api.views.ArticleDetailAPIView method)</a>
+
+      <ul>
+        <li><a href="api/generated/news.api.views.html#news.api.views.ArticleListCreateAPIView.get_permissions">(news.api.views.ArticleListCreateAPIView method)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.NewsletterListCreateAPIView.get_permissions">(news.api.views.NewsletterListCreateAPIView method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView.get_queryset">get_queryset() (news.api.views.ArticleDetailAPIView method)</a>
+
+      <ul>
+        <li><a href="api/generated/news.api.views.html#news.api.views.ArticleListCreateAPIView.get_queryset">(news.api.views.ArticleListCreateAPIView method)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.NewsletterListCreateAPIView.get_queryset">(news.api.views.NewsletterListCreateAPIView method)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.SubscribedArticleListAPIView.get_queryset">(news.api.views.SubscribedArticleListAPIView method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="H">H</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.management.commands.seed_demo.html#news.management.commands.seed_demo.Command.handle">handle() (news.management.commands.seed_demo.Command method)</a>
+</li>
+      <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsEditor.has_permission">has_permission() (news.api.permissions.IsEditor method)</a>
+
+      <ul>
+        <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsEditorOrJournalist.has_permission">(news.api.permissions.IsEditorOrJournalist method)</a>
+</li>
+        <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsJournalist.has_permission">(news.api.permissions.IsJournalist method)</a>
+</li>
+        <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsReader.has_permission">(news.api.permissions.IsReader method)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.views.html#news.views.home">home() (in module news.views)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="I">I</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.models.html#news.models.User.is_editor">is_editor (news.models.User property)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.User.is_journalist">is_journalist (news.models.User property)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.User.is_reader">is_reader (news.models.User property)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsEditor">IsEditor (class in news.api.permissions)</a>
+</li>
+      <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsEditorOrJournalist">IsEditorOrJournalist (class in news.api.permissions)</a>
+</li>
+      <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsJournalist">IsJournalist (class in news.api.permissions)</a>
+</li>
+      <li><a href="api/generated/news.api.permissions.html#news.api.permissions.IsReader">IsReader (class in news.api.permissions)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    module
+
+      <ul>
+        <li><a href="api/generated/news.admin.html#module-news.admin">news.admin</a>
+</li>
+        <li><a href="api/generated/news.api.permissions.html#module-news.api.permissions">news.api.permissions</a>
+</li>
+        <li><a href="api/generated/news.api.serializers.html#module-news.api.serializers">news.api.serializers</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#module-news.api.views">news.api.views</a>
+</li>
+        <li><a href="api/generated/news.api_urls.html#module-news.api_urls">news.api_urls</a>
+</li>
+        <li><a href="api/generated/news.apps.html#module-news.apps">news.apps</a>
+</li>
+        <li><a href="api/generated/news.forms.html#module-news.forms">news.forms</a>
+</li>
+        <li><a href="api/generated/news.management.commands.seed_demo.html#module-news.management.commands.seed_demo">news.management.commands.seed_demo</a>
+</li>
+        <li><a href="api/generated/news.models.html#module-news.models">news.models</a>
+</li>
+        <li><a href="api/generated/news.services.html#module-news.services">news.services</a>
+</li>
+        <li><a href="api/generated/news.signals.html#module-news.signals">news.signals</a>
+</li>
+        <li><a href="api/generated/news.urls.html#module-news.urls">news.urls</a>
+</li>
+        <li><a href="api/generated/news.views.html#module-news.views">news.views</a>
+</li>
+        <li><a href="api/generated/news_application.settings.html#module-news_application.settings">news_application.settings</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="N">N</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    news.admin
+
+      <ul>
+        <li><a href="api/generated/news.admin.html#module-news.admin">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.api.permissions
+
+      <ul>
+        <li><a href="api/generated/news.api.permissions.html#module-news.api.permissions">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.api.serializers
+
+      <ul>
+        <li><a href="api/generated/news.api.serializers.html#module-news.api.serializers">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.api.views
+
+      <ul>
+        <li><a href="api/generated/news.api.views.html#module-news.api.views">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.api_urls
+
+      <ul>
+        <li><a href="api/generated/news.api_urls.html#module-news.api_urls">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.apps
+
+      <ul>
+        <li><a href="api/generated/news.apps.html#module-news.apps">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.forms
+
+      <ul>
+        <li><a href="api/generated/news.forms.html#module-news.forms">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.management.commands.seed_demo
+
+      <ul>
+        <li><a href="api/generated/news.management.commands.seed_demo.html#module-news.management.commands.seed_demo">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.models
+
+      <ul>
+        <li><a href="api/generated/news.models.html#module-news.models">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.services
+
+      <ul>
+        <li><a href="api/generated/news.services.html#module-news.services">module</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    news.signals
+
+      <ul>
+        <li><a href="api/generated/news.signals.html#module-news.signals">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.urls
+
+      <ul>
+        <li><a href="api/generated/news.urls.html#module-news.urls">module</a>
+</li>
+      </ul></li>
+      <li>
+    news.views
+
+      <ul>
+        <li><a href="api/generated/news.views.html#module-news.views">module</a>
+</li>
+      </ul></li>
+      <li>
+    news_application.settings
+
+      <ul>
+        <li><a href="api/generated/news_application.settings.html#module-news_application.settings">module</a>
+</li>
+      </ul></li>
+      <li><a href="api/generated/news.apps.html#news.apps.NewsConfig">NewsConfig (class in news.apps)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.Newsletter">Newsletter (class in news.models)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.newsletter_create">newsletter_create() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.newsletter_delete">newsletter_delete() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.newsletter_edit">newsletter_edit() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.newsletter_list">newsletter_list() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.NewsletterAdmin">NewsletterAdmin (class in news.admin)</a>
+</li>
+      <li><a href="api/generated/news.forms.html#news.forms.NewsletterForm">NewsletterForm (class in news.forms)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.NewsletterListCreateAPIView">NewsletterListCreateAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.NewsletterSerializer">NewsletterSerializer (class in news.api.serializers)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.views.html#news.api.views.NewsletterListCreateAPIView.perform_create">perform_create() (news.api.views.NewsletterListCreateAPIView method)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView.perform_update">perform_update() (news.api.views.ArticleDetailAPIView method)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ApprovedArticleAPIView.post">post() (news.api.views.ApprovedArticleAPIView method)</a>
+</li>
+      <li><a href="api/generated/news.services.html#news.services.post_approved_article">post_approved_article() (in module news.services)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.forms.html#news.forms.PUBLIC_REGISTRATION_ROLES">PUBLIC_REGISTRATION_ROLES (in module news.forms)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.Publisher">Publisher (class in news.models)</a>
+</li>
+      <li><a href="api/generated/news.admin.html#news.admin.PublisherAdmin">PublisherAdmin (class in news.admin)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.PublisherListAPIView">PublisherListAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.PublisherSerializer">PublisherSerializer (class in news.api.serializers)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="R">R</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.apps.html#news.apps.NewsConfig.ready">ready() (news.apps.NewsConfig method)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.register">register() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.forms.html#news.forms.RegistrationForm">RegistrationForm (class in news.forms)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.views.html#news.views.review_articles">review_articles() (in module news.views)</a>
+</li>
+      <li><a href="api/generated/news.signals.html#news.signals.role_changed">role_changed() (in module news.signals)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.role_required">role_required() (in module news.views)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.forms.html#news.forms.NewsletterForm.save">save() (news.forms.NewsletterForm method)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.ArticleDetailAPIView.serializer_class">serializer_class (news.api.views.ArticleDetailAPIView attribute)</a>
+
+      <ul>
+        <li><a href="api/generated/news.api.views.html#news.api.views.ArticleListCreateAPIView.serializer_class">(news.api.views.ArticleListCreateAPIView attribute)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.NewsletterListCreateAPIView.serializer_class">(news.api.views.NewsletterListCreateAPIView attribute)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.PublisherListAPIView.serializer_class">(news.api.views.PublisherListAPIView attribute)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.SubscribedArticleListAPIView.serializer_class">(news.api.views.SubscribedArticleListAPIView attribute)</a>
+</li>
+        <li><a href="api/generated/news.api.views.html#news.api.views.UserListAPIView.serializer_class">(news.api.views.UserListAPIView attribute)</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.views.html#news.api.views.SubscribedArticleListAPIView">SubscribedArticleListAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.forms.html#news.forms.SubscriptionForm">SubscriptionForm (class in news.forms)</a>
+</li>
+      <li><a href="api/generated/news.views.html#news.views.subscriptions">subscriptions() (in module news.views)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.UserSerializer.to_representation">to_representation() (news.api.serializers.UserSerializer method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="U">U</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.ArticleSerializer.update">update() (news.api.serializers.ArticleSerializer method)</a>
+</li>
+      <li><a href="api/generated/news.models.html#news.models.User">User (class in news.models)</a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.models.html#news.models.User.Roles">User.Roles (class in news.models)</a>
+</li>
+      <li><a href="api/generated/news.api.views.html#news.api.views.UserListAPIView">UserListAPIView (class in news.api.views)</a>
+</li>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.UserSerializer">UserSerializer (class in news.api.serializers)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="V">V</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="api/generated/news.api.serializers.html#news.api.serializers.ArticleSerializer.validate">validate() (news.api.serializers.ArticleSerializer method)</a>
+</li>
+  </ul></td>
+</tr></table>
+
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026, Capstone Project.
+      <span class="lastupdated">Last updated on 2026-11-03.
+      </span></p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,18 +1,23 @@
 Git workflow
 ============
 
-The project uses a ``main`` branch for the integrated application, a ``docs``
-branch for docstrings and Sphinx source, and a ``container`` branch for Docker
-configuration. The assignment asks that the documentation changes and the
-container changes be merged into ``main`` after their respective work is
+The repository uses three branches:
+
+* ``main`` -- the integrated application.
+* ``docs`` -- docstrings and Sphinx documentation.
+* ``container`` -- Docker configuration.
+
+Work on ``docs`` and ``container`` is merged into ``main`` once it is
 committed.
 
-Useful checks before submission::
+Useful checks before submission:
+
+.. code-block:: powershell
 
    git branch -a
    git log --graph --oneline --decorate --all
    git status
 
-Generated HTML documentation can be rebuilt from the repository root with
-``python -m sphinx -b html docs docs/_build/html``. Commit the generated HTML
-folder after a successful build so a reviewer can browse it from the repository.
+After rebuilding the documentation (see :doc:`building_docs`), commit the
+``docs/_build/html/`` folder too, so reviewers can open the HTML directly from
+the repository.

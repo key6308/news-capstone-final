@@ -1,4 +1,4 @@
-"""Application module for the Django news project."""
+"""ASGI entry point that exposes the Django application as ``application``."""
 import os
 from django.core.asgi import get_asgi_application
 

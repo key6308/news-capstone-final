@@ -1,1 +1,1 @@
-"""Application module for the Django news project."""
+"""The ``news`` Django app: models, views, forms, services, and REST API."""
